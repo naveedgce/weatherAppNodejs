@@ -1,0 +1,139 @@
+
+*{    
+    font-family:Quicksand;
+}
+
+.box{
+    width: 30vw;
+    height: 60vh;
+    margin-left: 20px;
+    margin-top: 30px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 3rem rgba(0,0,0,0.2);
+    background: #a5bbdd;
+    position: relative;
+    min-width: 20rem;
+    min-height: 35rem;
+    overflow: hidden;
+}
+
+#weathericon{
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ font-size: 5rem;
+      }
+/* weather icon animation from www.css-tricks.com*/
+.fa-sun{
+animation-name: stretch;
+animation-duration: 3s; 
+animation-timing-function: ease-out; 
+animation-delay: 0;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+      }
+      @keyframes stretch {
+          from {transform: scale(0.6);}
+          to {transform: scale(1.7);}
+      }
+
+    .info{
+       position: absolute;
+        bottom: 0;
+        width: 100%;
+        height:55%;
+   
+    }
+    #iconLoc{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+    #location{
+        
+        font-weight: 800;
+        font-size:2rem;
+        }
+    #date {
+        text-align: center;
+        color:green;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+            }
+    #temp{
+        text-align: center;
+        font-size: 3rem;
+    }
+    #temp_min_max{
+        text-align:center;
+        font-weight: 500;
+        font-size: 1rem;
+        color:green;
+        }
+    
+  /* from www.css-tricks.com*/  
+.fa-street-view{
+  font-weight: 600;
+  font-size:3rem;
+  margin-top: 1rem;
+  animation:nudge 5s linear infinite alternate;
+
+}
+  @keyframes nudge {
+    from {
+      transform: translate(-0.5rem);
+    }
+    to {
+      transform: translate(0.3rem);
+    }
+      }
+/* water wave animation from www.freefrontend.com*/
+
+.waves {
+  position:relative;
+  width: 300%;
+  height:50vh;
+  margin-bottom:-27px; 
+  min-height:50px;
+  max-height:250px;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 15s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -1s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  }
+
